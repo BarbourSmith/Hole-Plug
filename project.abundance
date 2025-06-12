@@ -1,14 +1,463 @@
 {
     "atomType": "Molecule",
-    "name": "Hole Plug",
+    "name": "Hole-Plug",
     "x": 0,
     "y": 0,
     "uniqueID": "c41af68a-24a8-4a6d-9b58-d61b62d15403",
     "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": "03e27d32-fe9e-4ead-a914-47d7e55d00c2",
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "ad08715f-cba8-4fd3-8ca0-e0d4262068db"
+                }
+            ],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Molecule",
+            "name": "Plug",
+            "x": 0.23214285714285715,
+            "y": 0.29329608938547486,
+            "uniqueID": "cc3a0702-8205-4914-a7e9-9b67d622953f",
+            "ioValues": [],
+            "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": "25ac9853-8e1c-455d-b935-2f360da6714b",
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "0b626e80-2fd3-432a-8405-7ece82c00d1a"
+                        }
+                    ],
+                    "description": "Connect geometry here to make it available in the next level up. "
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.20634920634920637,
+                    "y": 0.44972067039106145,
+                    "uniqueID": "17cc99ea-278a-4165-831e-18c548ec7fa5",
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 13
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.19444444444444442,
+                    "y": 0.7932960893854748,
+                    "uniqueID": "073b4587-9256-407a-9ced-be75c5ca7ce2",
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 14
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.32076719576719576,
+                    "y": 0.7067039106145251,
+                    "uniqueID": "084b1eb4-65ef-48b0-bb6e-1c1d6b226039",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "073b4587-9256-407a-9ced-be75c5ca7ce2"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 1
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.36904761904761907,
+                    "y": 0.3687150837988827,
+                    "uniqueID": "3351de05-2e95-43ec-bf55-d48de2a468fa",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "17cc99ea-278a-4165-831e-18c548ec7fa5"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 15
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Fusion",
+                    "name": "Fusion",
+                    "x": 0.5436507936507936,
+                    "y": 0.5139664804469274,
+                    "uniqueID": "0b626e80-2fd3-432a-8405-7ece82c00d1a",
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": "084b1eb4-65ef-48b0-bb6e-1c1d6b226039"
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": "3351de05-2e95-43ec-bf55-d48de2a468fa"
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
+                    "unionType": "Fusion"
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "17cc99ea-278a-4165-831e-18c548ec7fa5",
+                    "ap2ID": "3351de05-2e95-43ec-bf55-d48de2a468fa"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "073b4587-9256-407a-9ced-be75c5ca7ce2",
+                    "ap2ID": "084b1eb4-65ef-48b0-bb6e-1c1d6b226039"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": "084b1eb4-65ef-48b0-bb6e-1c1d6b226039",
+                    "ap2ID": "0b626e80-2fd3-432a-8405-7ece82c00d1a"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": "3351de05-2e95-43ec-bf55-d48de2a468fa",
+                    "ap2ID": "0b626e80-2fd3-432a-8405-7ece82c00d1a"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "0b626e80-2fd3-432a-8405-7ece82c00d1a",
+                    "ap2ID": "25ac9853-8e1c-455d-b935-2f360da6714b"
+                }
+            ],
+            "fileTypeVersion": 1,
+            "compiledBom": {}
+        },
+        {
+            "atomType": "Molecule",
+            "name": "Hole",
+            "x": 0.22751322751322753,
+            "y": 0.7513966480446927,
+            "uniqueID": "f8e5ffcd-aae5-4981-83b5-e4ad7431c6fa",
+            "ioValues": [],
+            "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": "ee65d3d5-f34c-4d0d-9cbb-1a95889c7f92",
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "377e2b4e-24a5-4eaa-a288-029149bb7a91"
+                        }
+                    ],
+                    "description": "Connect geometry here to make it available in the next level up. "
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.19510582010582012,
+                    "y": 0.6089385474860336,
+                    "uniqueID": "71fc38a4-8f72-4d9c-9466-033045032996",
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 16
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.33664021164021163,
+                    "y": 0.6452513966480448,
+                    "uniqueID": "6371df85-c3cd-496c-a965-1546839aa75f",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "71fc38a4-8f72-4d9c-9466-033045032996"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 1
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.208994708994709,
+                    "y": 0.29050279329608936,
+                    "uniqueID": "527872f4-4f36-46f7-a3b7-07d92c466782",
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 14
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.3637566137566138,
+                    "y": 0.3575418994413408,
+                    "uniqueID": "a02faa89-cb68-4d02-a219-2138cd1a7ba3",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "527872f4-4f36-46f7-a3b7-07d92c466782"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 15
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Fusion",
+                    "name": "Fusion",
+                    "x": 0.5575396825396826,
+                    "y": 0.4357541899441341,
+                    "uniqueID": "337fdb1a-8f49-4932-ae26-4c79b5be5960",
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": "6371df85-c3cd-496c-a965-1546839aa75f"
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": "a02faa89-cb68-4d02-a219-2138cd1a7ba3"
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
+                    "unionType": "Fusion"
+                },
+                {
+                    "atomType": "Tag",
+                    "name": "Hole",
+                    "x": 0.6507936507936508,
+                    "y": 0.5754189944134078,
+                    "uniqueID": "377e2b4e-24a5-4eaa-a288-029149bb7a91",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "337fdb1a-8f49-4932-ae26-4c79b5be5960"
+                        }
+                    ],
+                    "description": "Tags geometry so that it can be extracted later.",
+                    "tags": [
+                        "Hole"
+                    ]
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "71fc38a4-8f72-4d9c-9466-033045032996",
+                    "ap2ID": "6371df85-c3cd-496c-a965-1546839aa75f"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": "6371df85-c3cd-496c-a965-1546839aa75f",
+                    "ap2ID": "337fdb1a-8f49-4932-ae26-4c79b5be5960"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "527872f4-4f36-46f7-a3b7-07d92c466782",
+                    "ap2ID": "a02faa89-cb68-4d02-a219-2138cd1a7ba3"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": "a02faa89-cb68-4d02-a219-2138cd1a7ba3",
+                    "ap2ID": "337fdb1a-8f49-4932-ae26-4c79b5be5960"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": "337fdb1a-8f49-4932-ae26-4c79b5be5960",
+                    "ap2ID": "377e2b4e-24a5-4eaa-a288-029149bb7a91"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": "377e2b4e-24a5-4eaa-a288-029149bb7a91",
+                    "ap2ID": "ee65d3d5-f34c-4d0d-9cbb-1a95889c7f92"
+                }
+            ],
+            "fileTypeVersion": 1,
+            "compiledBom": []
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.42460317460317465,
+            "y": 0.7681564245810056,
+            "uniqueID": "ad08715f-cba8-4fd3-8ca0-e0d4262068db",
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": "f8e5ffcd-aae5-4981-83b5-e4ad7431c6fa"
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": "cc3a0702-8205-4914-a7e9-9b67d622953f"
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
+        },
+        {
+            "atomType": "Export",
+            "name": "Export",
+            "x": 0.6712962962962963,
+            "y": 0.7960893854748604,
+            "uniqueID": "d931a3ff-a56e-455d-a41c-b7dd8d67f4e4",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "ad08715f-cba8-4fd3-8ca0-e0d4262068db"
+                },
+                {
+                    "name": "Resolution (dpi)",
+                    "ioValue": 96
+                },
+                {
+                    "name": "Part Name",
+                    "ioValue": "Hole"
+                },
+                {
+                    "name": "File Type",
+                    "ioValue": "STL"
+                }
+            ],
+            "description": "Export Atom, let's you choose a type of file to Export.",
+            "type": "STL",
+            "resolution": 96,
+            "importIndex": 0,
+            "partName": "Hole"
+        },
+        {
+            "atomType": "Export",
+            "name": "Export",
+            "x": 0.417989417989418,
+            "y": 0.3268156424581006,
+            "uniqueID": "6a88e82a-b351-432a-9fc0-ee07085e916f",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "cc3a0702-8205-4914-a7e9-9b67d622953f"
+                },
+                {
+                    "name": "Resolution (dpi)",
+                    "ioValue": 96
+                },
+                {
+                    "name": "Part Name",
+                    "ioValue": "Plug"
+                },
+                {
+                    "name": "File Type",
+                    "ioValue": "STL"
+                }
+            ],
+            "description": "Export Atom, let's you choose a type of file to Export.",
+            "type": "STL",
+            "resolution": 96,
+            "importIndex": 0,
+            "partName": "Plug"
+        }
+    ],
+    "allConnectors": [
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": "cc3a0702-8205-4914-a7e9-9b67d622953f",
+            "ap2ID": "ad08715f-cba8-4fd3-8ca0-e0d4262068db"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": "cc3a0702-8205-4914-a7e9-9b67d622953f",
+            "ap2ID": "6a88e82a-b351-432a-9fc0-ee07085e916f"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": "f8e5ffcd-aae5-4981-83b5-e4ad7431c6fa",
+            "ap2ID": "ad08715f-cba8-4fd3-8ca0-e0d4262068db"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": "ad08715f-cba8-4fd3-8ca0-e0d4262068db",
+            "ap2ID": "d931a3ff-a56e-455d-a41c-b7dd8d67f4e4"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": "ad08715f-cba8-4fd3-8ca0-e0d4262068db",
+            "ap2ID": "03e27d32-fe9e-4ead-a914-47d7e55d00c2"
+        }
+    ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
     "compiledBom": {},
