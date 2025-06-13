@@ -226,13 +226,49 @@
                         {
                             "atomType": "Extrude",
                             "name": "Extrude",
-                            "x": 0.41286863270777474,
-                            "y": 0.6815642458100559,
+                            "x": 0.387846291331546,
+                            "y": 0.4636871508379888,
                             "uniqueID": "8b086318-a126-40b1-88a9-314862855d39",
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": ""
+                                    "ioValue": "4dc28698-ebdd-4bf3-90c3-8f11cd22628f"
+                                },
+                                {
+                                    "name": "height",
+                                    "ioValue": 10
+                                }
+                            ],
+                            "description": "Extrudes a 2D shape. Input can be negitive. "
+                        },
+                        {
+                            "atomType": "Rectangle",
+                            "name": "Rectangle",
+                            "x": 0.3521000893655049,
+                            "y": 0.7234636871508381,
+                            "uniqueID": "bf441074-8e1a-4975-a390-f25350b67b71",
+                            "ioValues": [
+                                {
+                                    "name": "x length",
+                                    "ioValue": 10
+                                },
+                                {
+                                    "name": "y length",
+                                    "ioValue": 10
+                                }
+                            ],
+                            "description": "Creates a new rectangle."
+                        },
+                        {
+                            "atomType": "Extrude",
+                            "name": "Extrude",
+                            "x": 0.516532618409294,
+                            "y": 0.7374301675977654,
+                            "uniqueID": "7782b650-c1ce-4b81-aa46-6468517bd020",
+                            "ioValues": [
+                                {
+                                    "name": "geometry",
+                                    "ioValue": "bf441074-8e1a-4975-a390-f25350b67b71"
                                 },
                                 {
                                     "name": "height",
@@ -242,7 +278,22 @@
                             "description": "Extrudes a 2D shape. Input can be negitive. "
                         }
                     ],
-                    "allConnectors": [],
+                    "allConnectors": [
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "4dc28698-ebdd-4bf3-90c3-8f11cd22628f",
+                            "ap2ID": "8b086318-a126-40b1-88a9-314862855d39"
+                        },
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "geometry",
+                            "ap2Primary": true,
+                            "ap1ID": "bf441074-8e1a-4975-a390-f25350b67b71",
+                            "ap2ID": "7782b650-c1ce-4b81-aa46-6468517bd020"
+                        }
+                    ],
                     "fileTypeVersion": 1,
                     "compiledBom": {}
                 }
